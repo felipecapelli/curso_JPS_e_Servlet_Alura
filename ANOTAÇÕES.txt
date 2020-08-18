@@ -1,0 +1,8 @@
+Deploy:
+1-Entrar na pasta /bin do servidor
+2-Executar o comando startup.bat (ou startup.sh se for linux)
+---------------
+Mudar a porta de 8080 para 80 (padrão http, para não precisar digitar a porta):
+1-Entrar na pasta /conf do servidor
+2-Dar um ctrl+f e procurar 8080
+3-Modificar para 80

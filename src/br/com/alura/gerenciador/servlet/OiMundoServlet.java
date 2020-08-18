@@ -8,8 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/oi")
+@WebServlet(urlPatterns = "/oi", loadOnStartup=1)
 public class OiMundoServlet extends HttpServlet{
+	
+	public OiMundoServlet() {
+		System.out.println("Posso usar o loadOnStartup para obrigar o servlet a criar uma instancia de OiMundoServlet ao subir a aplicação");
+		System.out.println("Pois o padrão sigleton eh utilizado para instanciar o servlet somente se alguem usar essa rota");
+		System.out.println("Essa pode ser uma opção caso eu queira retirar o padrão singleton para esse servlet");
+
+	}
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException{
